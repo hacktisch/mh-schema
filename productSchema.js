@@ -44,12 +44,18 @@ module.exports = [
     {
         tab: "catalog",
         source: "variants",
+        variants_target: "variants_data",
         type: "array",
         sub: [
             {
                 source: "name",
                 label: "Option label",
                 type: "text"
+            },
+            {
+                source: "key",
+                type: "text",
+                defaultFunction: "randId"
             },
             {
                 source: "options",
@@ -60,6 +66,11 @@ module.exports = [
                         source: "value",
                         label: "Option value",
                         type: "text"
+                    },
+                    {
+                        source: "key",
+                        type: "text",
+                        defaultFunction: "randId"
                     }
                 ]
             }
@@ -92,6 +103,7 @@ module.exports = [
             },
             {
                 source: "price",
+                label: "Price",
                 type: "number",
                 render: "price"
             },
