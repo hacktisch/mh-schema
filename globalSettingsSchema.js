@@ -216,7 +216,7 @@ const localeFieldsSet = [
   {
     source: "RATING_SITE_TOTAL",
     label: "RATING_SITE_TOTAL",
-    help: "Customers have given {{total}} reviews about Evenses."
+    help: "Customers have given {{total}} reviews about Multihaarden."
   },
   {
     source: "RATING_SITE_AVG",
@@ -595,7 +595,7 @@ module.exports = [
     label: "Logo",
 
     type: "select",
-    choices: ["Evenses", "Advocaathulp"].map(name => ({
+    choices: ["Multihaarden"].map(name => ({
       id: name.toLowerCase(),
       name
     }))
