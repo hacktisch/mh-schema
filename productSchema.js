@@ -53,6 +53,7 @@ module.exports = [
             },
             {
                 source: "options",
+                label: "Options",
                 type: "array",
                 sub: [
                     {
@@ -73,7 +74,6 @@ module.exports = [
 
         sub: [
             {
-                tab: "catalog",
                 label: "Main image",
                 source: "mainImage",
                 type: "image",
@@ -91,44 +91,37 @@ module.exports = [
                 /////////validate: required
             },
             {
-                tab: "catalog",
                 source: "price",
                 type: "number",
                 render: "price"
             },
             {
-                tab: "catalog",
                 source: "price_compare",
                 label: "Price compare at",
                 type: "number",
                 render: "price"
             },
             {
-                tab: "catalog",
                 source: "kilo",
                 label: "Weight in kilogram",
                 type: "number"
             },
             {
-                tab: "catalog",
                 source: "inventory_qty",
                 label: "Quantity in inventory",
                 type: "number"
             },
             {
-                tab: "catalog",
                 source: "sku",
                 label: "SKU",
                 type: "text"
             },
             {
-                tab: "catalog",
                 source: "barcode",
                 label: "Barcode",
                 type: "text"
             },
             {
-                tab: "catalog",
                 source: "cost",
                 label: "Cost per item",
                 type: "number"
