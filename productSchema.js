@@ -2,51 +2,12 @@ module.exports = [
     require("./groups/title.js"),
     require("./groups/pathReference.js"),
     require("./groups/published.js"),
-    {
-        tab: "main",
-        source: "supplier_id",
-        type: "reference",
-        label: "Supplier account",
-        help:
-            "Suppliers with a login to the CMS can submit revision proposals for their linked products",
-        filter: {
-            role: "supplier",
-            status: 1
-        },
-        reference: {
-            resource: "user",
-            optionText: "name",
-            inputType: "autocomplete"
-        },
-        props: {
-            sort: { field: "name", order: "ASC" }
-        }
-    },
-    {
-        tab: "details",
-        source: "lead",
-        type: "longtext",
-        multiline: true
-    },
+
     {
         tab: "details",
         source: "body",
         type: "markdown",
         label: "Long description"
-    },
-    {
-        tab: "media",
-        label: "Main image",
-        source: "mainImage",
-        type: "image",
-        accept: { "image/jpeg": true, "image/webp": "jpg", "image/png": "jpg" },
-        transforms: {
-            _original: {
-                width: 700,
-                height: 470
-            }
-        }
-        /////////validate: required
     },
 
     {
@@ -82,24 +43,99 @@ module.exports = [
 
     {
         tab: "catalog",
-        source: "price",
-        type: "number",
-        render: "price"
+        source: "variants",
+        type: "array",
+        sub: [
+            {
+                source: "name",
+                label: "Option label",
+                type: "text"
+            },
+            {
+                source: "options",
+                type: "array",
+                sub: [
+                    {
+                        source: "value",
+                        label: "Option value",
+                        type: "text"
+                    }
+                ]
+            }
+        ]
     },
+
     {
         tab: "catalog",
-        source: "price_until",
-        type: "number",
-        render: "price",
-        label: "Price until",
-        help:
-            "Maximum price in the price range",
+        source: "variants_data",
+        type: "variants_table",
+        variants_source: "variants",
+
+        sub: [
+            {
+                tab: "catalog",
+                label: "Main image",
+                source: "mainImage",
+                type: "image",
+                accept: {
+                    "image/jpeg": true,
+                    "image/webp": "jpg",
+                    "image/png": "jpg"
+                },
+                transforms: {
+                    _original: {
+                        width: 700,
+                        height: 470
+                    }
+                }
+                /////////validate: required
+            },
+            {
+                tab: "catalog",
+                source: "price",
+                type: "number",
+                render: "price"
+            },
+            {
+                tab: "catalog",
+                source: "price_compare",
+                label: "Price compare at",
+                type: "number",
+                render: "price"
+            },
+            {
+                tab: "catalog",
+                source: "kilo",
+                label: "Weight in kilogram",
+                type: "number"
+            },
+            {
+                tab: "catalog",
+                source: "inventory_qty",
+                label: "Quantity in inventory",
+                type: "number"
+            },
+            {
+                tab: "catalog",
+                source: "sku",
+                label: "SKU",
+                type: "text"
+            },
+            {
+                tab: "catalog",
+                source: "barcode",
+                label: "Barcode",
+                type: "text"
+            },
+            {
+                tab: "catalog",
+                source: "cost",
+                label: "Cost per item",
+                type: "number"
+            }
+        ]
     },
-    {
-        tab: "catalog",
-        source: "priceOnRequest",
-        type: "boolean"
-    },
+
     {
         tab: "details",
         source: "reviews",
@@ -128,37 +164,14 @@ module.exports = [
         ]
     },
     {
-        tab: "details",
-        source: "titleOverwritten",
-        type: "text"
-    },
-    {
-        tab: "details",
-        source: "songs",
-        type: "array",
-        sub: [
-            {
-                source: "title",
-                label: "Title",
-                type: "text"
-            },
-            {
-                source: "artist",
-                label: "Artist",
-                type: "text"
-            }
-        ]
-    },
-    {
         tab: "catalog",
         source: "weight",
-        type: "number"
+        type: "number",
+        label: "Weight in a list",
+        help:
+            "Lower weight is shown first in the results. Higher weights on bottom."
     },
-    {
-        tab: "catalog",
-        source: "isPartner",
-        type: "boolean"
-    },
+
     {
         tab: "catalog",
         source: "category",
@@ -168,38 +181,6 @@ module.exports = [
         label: "Category",
         root: "category",
         filter: { root: "category" },
-        reference: {
-            resource: "tree",
-            optionText: "text"
-        },
-        props: {
-            sort: { field: "weight", order: "ASC" }
-        }
-    },
-    {
-        tab: "catalog",
-        source: "occasion",
-        type: "reference",
-        multiple: "true",
-        label: "Occasion",
-        root: "occasion",
-        filter: { root: "occasion" },
-        reference: {
-            resource: "tree",
-            optionText: "text"
-        },
-        props: {
-            sort: { field: "weight", order: "ASC" }
-        }
-    },
-    {
-        tab: "catalog",
-        source: "genre",
-        type: "reference",
-        multiple: "true",
-        label: "Genre",
-        root: "genre",
-        filter: { root: "genre" },
         reference: {
             resource: "tree",
             optionText: "text"

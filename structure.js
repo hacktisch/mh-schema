@@ -3,12 +3,9 @@ module.exports = {
 		{ id: "category", name: "Category" },
 		{ id: "footer", name: "Footer menu" },
 		{ id: "contact", name: "Contact menu" },
-		{ id: "occasion", name: "Occasions" },
-		{ id: "genre", name: "Genres" },
-		{ id: "region", name: "Regions" }
+		{ id: "vendor", name: "Vendors" }
 	],
 	roles:[
-		{ id: "supplier", name: "Supplier" },
 		{ id: "editor", name: "Editor" },
 		{ id: "admin", name: "Admin" }
 	]
