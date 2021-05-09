@@ -1,6 +1,6 @@
 {
-  "name": "ev-schema",
-  "version": "1.7.0",
+  "name": "mh-schema",
+  "version": "1.8.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hacktisch/ev-schema.git"
+    "url": "git+https://github.com/hacktisch/mh-schema.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hacktisch/ev-schema/issues"
+    "url": "https://github.com/hacktisch/mh-schema/issues"
   },
-  "homepage": "https://github.com/hacktisch/ev-schema#readme"
+  "homepage": "https://github.com/hacktisch/mh-schema#readme"
 }
