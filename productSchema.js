@@ -85,6 +85,11 @@ module.exports = [
 
         sub: [
             {
+                source: "key",
+                type: "text"
+            },
+
+            {
                 label: "Main image",
                 source: "mainImage",
                 type: "image",
