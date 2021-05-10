@@ -55,7 +55,8 @@ module.exports = [
             {
                 source: "key",
                 type: "text",
-                defaultFunction: "randId"
+                defaultFunction: "randId",
+                hidden:true
             },
             {
                 source: "options",
@@ -70,7 +71,8 @@ module.exports = [
                     {
                         source: "key",
                         type: "text",
-                        defaultFunction: "randId"
+                        defaultFunction: "randId",
+                        hidden:true
                     }
                 ]
             }
@@ -87,7 +89,8 @@ module.exports = [
         sub: [
             {
                 source: "key",
-                type: "text"
+                type: "text",
+                hidden:true
             },
 
             {
