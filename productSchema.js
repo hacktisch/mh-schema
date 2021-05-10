@@ -80,7 +80,8 @@ module.exports = [
     {
         tab: "catalog",
         source: "variants_data",
-        type: "variants_table",
+        type: "array",
+        mode:"variants_table",
         variants_source: "variants",
 
         sub: [
