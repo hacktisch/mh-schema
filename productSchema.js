@@ -6,8 +6,20 @@ module.exports = [
     {
         tab: "details",
         source: "body",
-        type: "markdown",
-        label: "Long description"
+        label: "Product specifications",
+        type: "array",
+        sub: [
+            {
+                source: "tab",
+                label: "Tab label",
+                type: "text"
+            },
+            {
+                source: "text",
+                type: "markdown",
+                label: "Tab contents"
+            }
+        ]
     },
 
     {
@@ -56,7 +68,7 @@ module.exports = [
                 source: "key",
                 type: "text",
                 defaultFunction: "randId",
-                hidden:true
+                hidden: true
             },
             {
                 source: "options",
@@ -72,7 +84,7 @@ module.exports = [
                         source: "key",
                         type: "text",
                         defaultFunction: "randId",
-                        hidden:true
+                        hidden: true
                     }
                 ]
             }
@@ -83,14 +95,14 @@ module.exports = [
         tab: "catalog",
         source: "variants_data",
         type: "array",
-        mode:"variants_table",
+        mode: "variants_table",
         variants_source: "variants",
 
         sub: [
             {
                 source: "key",
                 type: "text",
-                hidden:true
+                hidden: true
             },
 
             {
