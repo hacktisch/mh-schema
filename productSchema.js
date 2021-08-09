@@ -21,6 +21,19 @@ module.exports = [
             }
         ]
     },
+    {
+        tab: "details",
+        source: "checklist",
+        label: "Check list",
+        type: "array",
+        sub: [
+            {
+                source: "text",
+                type: "text",
+                label: "Bullet point"
+            }
+        ]
+    },
 
     {
         tab: "media",
