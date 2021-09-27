@@ -676,6 +676,22 @@ module.exports = [
     help: "10.000+ events experience"
   },
 
+ {
+    tab: "general",
+    source: "usps_top_bar",
+    label: "Short USPs in top bar",
+    type: "array",
+    sub: [
+      {
+        source: "title",
+        label: "USP Text",
+        type: "text"
+      }
+    ]
+  },
+
+
+
   {
     tab: "general",
     source: "usps",
