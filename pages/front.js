@@ -32,6 +32,30 @@ module.exports = [
 		]
 	},
 
+	 {
+    tab: "banner",
+    source: "usps_banner",
+    label: "USP in banner",
+    type: "array",
+    sub: [
+      {
+        source: "icon",
+        type: "reference",
+        label: "Icon",
+        reference: {
+          resource: "icon",
+          inputType: "autocomplete",
+          images: true
+        }
+      },
+      {
+        label: "Text",
+        source: "text",
+        type: "text"
+      }
+    ]
+  },
+
 	{
 		tab: "order_process",
 		source: "process_title",

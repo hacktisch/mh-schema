@@ -691,6 +691,40 @@ module.exports = [
   },
 
 
+  {
+    tab: "general",
+    source: "usps_checkout_button",
+    label: "USPs under confirmation button",
+    type: "array",
+    sub: [
+      {
+        source: "title",
+        label: "Title",
+        type: "text"
+      },
+       {
+        source: "title",
+        label: "Description",
+        type: "text"
+      },
+
+
+
+      {
+        source: "icon",
+        type: "reference",
+        label: "Icon",
+        reference: {
+          resource: "icon",
+          inputType: "autocomplete",
+          images: true
+        }
+      }
+
+    ]
+  },
+
+
 
   {
     tab: "general",
