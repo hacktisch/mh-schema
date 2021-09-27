@@ -673,8 +673,7 @@ module.exports = [
     label: "Usp: experience",
     type: "text",
     multiline: true,
-    help: "10.000+ events experience"
-    
+    help: "10.000+ events experience" 
   },
 
  {
