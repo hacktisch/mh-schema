@@ -703,7 +703,7 @@ module.exports = [
         type: "text"
       },
        {
-        source: "title",
+        source: "desc",
         label: "Description",
         type: "text"
       },
