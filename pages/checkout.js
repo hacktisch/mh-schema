@@ -10,7 +10,7 @@ module.exports = [
 	{
 		label: "Extra info block: Images",
 		source: "extra_images",
-type: "array",
+		type: "array",
 		sub: [
 			{
 				source: "image",
@@ -41,12 +41,12 @@ type: "array",
 			}
 		]
 	},
-	    {
-        tab: "details",
-        source: "reviews",
-        type: "array",
-        sub: [
-        {
+	{
+		tab: "details",
+		source: "reviews",
+		type: "array",
+		sub: [
+			{
 				source: "image",
 				label: "Image",
 				type: "image",
@@ -55,29 +55,29 @@ type: "array",
 					"image/webp": "jpg",
 					"image/png": "jpg"
 				}
+			},
+			{
+				source: "author",
+				label: "Author",
+				type: "text"
+			},
+			{
+				source: "rating",
+				label: "Rating",
+				type: "slider",
+				min: 0,
+				max: 100,
+				step: 10,
+				factor: 0.05
+			},
+			{
+				source: "text",
+				label: "Text",
+				type: "longtext",
+				multiline: true
 			}
-            {
-                source: "author",
-                label: "Author",
-                type: "text"
-            },
-            {
-                source: "rating",
-                label: "Rating",
-                type: "slider",
-                min: 0,
-                max: 100,
-                step: 10,
-                factor: 0.05
-            },
-            {
-                source: "text",
-                label: "Text",
-                type: "longtext",
-                multiline: true
-            }
-        ]
-    },
+		]
+	},
 
 	...require("../groups/metaTags.js")
 ];
