@@ -10,7 +10,7 @@ module.exports = [
 	{
 		label: "Extra info block: Images",
 		source: "extra_images",
-
+type: "array",
 		sub: [
 			{
 				source: "image",
