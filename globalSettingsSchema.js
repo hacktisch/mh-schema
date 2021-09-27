@@ -674,6 +674,7 @@ module.exports = [
     type: "text",
     multiline: true,
     help: "10.000+ events experience"
+    
   },
 
  {
