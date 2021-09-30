@@ -589,17 +589,24 @@ module.exports = [
     defaultColor: "#0D1112"
   },
 
-  {
-    tab: "general",
-    source: "logo",
-    label: "Logo",
 
-    type: "select",
-    choices: ["Multihaarden"].map(name => ({
-      id: name.toLowerCase(),
-      name
-    }))
-  },
+  {
+    tab:"general",
+        label: "Logo",
+        source: "logo_img",
+        type: "image",
+        accept: {
+            "image/svg+xml": true,
+            "image/webp": "png",
+            "image/png": true
+        },
+        transforms: {
+            _original: {
+                width: 110,
+                height: 110
+            }
+        }
+    },
 
   {
     tab: "general",
