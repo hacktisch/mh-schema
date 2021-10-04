@@ -549,7 +549,8 @@ const localeFieldsSet = [
   {
     source: "AGENDA_AVAILABLE",
     label: "AGENDA_AVAILABLE",
-    help: "Great! {{product}} is available from {{event_start}} till {{event_end}}."
+    help:
+      "Great! {{product}} is available from {{event_start}} till {{event_end}}."
   },
   {
     source: "AGENDA_DISCLAIMER",
@@ -589,24 +590,23 @@ module.exports = [
     defaultColor: "#0D1112"
   },
 
-
   {
-    tab:"general",
-        label: "Logo",
-        source: "logo_img",
-        type: "image",
-        accept: {
-            "image/svg+xml": true,
-            "image/webp": "png",
-            "image/png": true
-        },
-        transforms: {
-            _original: {
-                width: 110,
-                height: 110
-            }
-        }
+    tab: "general",
+    label: "Logo",
+    source: "logo_img",
+    type: "image",
+    accept: {
+      "image/svg+xml": true,
+      "image/webp": "png",
+      "image/png": true
     },
+    transforms: {
+      _original: {
+        width: 110,
+        height: 110
+      }
+    }
+  },
 
   {
     tab: "general",
@@ -680,10 +680,10 @@ module.exports = [
     label: "Usp: experience",
     type: "text",
     multiline: true,
-    help: "10.000+ events experience" 
+    help: "10.000+ events experience"
   },
 
- {
+  {
     tab: "general",
     source: "usps_top_bar",
     label: "Short USPs in top bar",
@@ -697,7 +697,6 @@ module.exports = [
     ]
   },
 
-
   {
     tab: "general",
     source: "usps_checkout_button",
@@ -709,13 +708,11 @@ module.exports = [
         label: "Title",
         type: "text"
       },
-       {
+      {
         source: "desc",
         label: "Description",
         type: "text"
       },
-
-
 
       {
         source: "icon",
@@ -727,11 +724,8 @@ module.exports = [
           images: true
         }
       }
-
     ]
   },
-
-
 
   {
     tab: "general",
