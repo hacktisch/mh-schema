@@ -57,19 +57,36 @@ module.exports = [
   },
 
 	{
-		tab: "order_process",
+		tab: "collection",
 		source: "process_title",
+		label:"Collection title",
 		type: "text"
 	},
 	{
-		tab: "order_process",
+		tab: "collection",
 
 		source: "process",
-		label: "Steps",
+		label: "Collection elements",
 		type: "array",
-		min: 3,
-		max: 3,
 		sub: [
+		    {
+        source: "path_id",
+        type: "reference",
+        label: "Path to link to",
+        filter: {
+            weight: 0
+        },
+        reference: {
+            resource: "path",
+            optionText: "path",
+            inputType: "autocomplete"
+        },
+        props: {
+            sort: { field: "length(path)", order: "ASC" }
+        },
+
+        validate: ["required"]
+    },
 			{
 				source: "image",
 				label: "Image",
@@ -93,12 +110,6 @@ module.exports = [
 				type: "markdown"
 			}
 		]
-	},
-	{
-		tab: "order_process",
-		source: "process_button",
-		type: "text",
-		label: "Order button text"
 	},
 	{
 		tab: "product_selection",
