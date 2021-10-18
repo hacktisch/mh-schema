@@ -650,38 +650,6 @@ module.exports = [
     label: "Extra links in footer"
   },
 
-  {
-    tab: "general",
-    source: "usp_quality",
-    label: "Usp: quality",
-    type: "text",
-    multiline: true,
-    help: "Guaranteed quality"
-  },
-  {
-    tab: "general",
-    source: "usp_service",
-    label: "Usp: service",
-    type: "text",
-    multiline: true,
-    help: "Personal service"
-  },
-  {
-    tab: "general",
-    source: "usp_guarantee",
-    label: "Usp: guarantee",
-    type: "text",
-    multiline: true,
-    help: "Always-playing guarantee"
-  },
-  {
-    tab: "general",
-    source: "usp_experience",
-    label: "Usp: experience",
-    type: "text",
-    multiline: true,
-    help: "10.000+ events experience"
-  },
 
   {
     tab: "general",
