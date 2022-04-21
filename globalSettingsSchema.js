@@ -592,6 +592,66 @@ module.exports = [
 
   {
     tab: "general",
+    type: "color",
+    label: "Color header top background",
+    source: "color_header_top_bg",
+    defaultColor: "#FFFFFF"
+  },
+  {
+    tab: "general",
+    type: "color",
+    label: "Color header top text",
+    source: "color_header_top_text",
+    defaultColor: "#000000"
+  },
+
+  {
+    tab: "general",
+    type: "color",
+    label: "Color header menu background",
+    source: "color_header_menu_bg",
+    defaultColor: "#FFFFFF"
+  },
+  {
+    tab: "general",
+    type: "color",
+    label: "Color header menu text",
+    source: "color_header_menu_text",
+    defaultColor: "#000000"
+  },
+
+  {
+    tab: "general",
+    type: "color",
+    label: "Color footer top background",
+    source: "color_footer_top_bg",
+    defaultColor: "#FFFFFF"
+  },
+  {
+    tab: "general",
+    type: "color",
+    label: "Color footer top text",
+    source: "color_footer_top_text",
+    defaultColor: "#000000"
+  },
+
+  {
+    tab: "general",
+    type: "color",
+    label: "Color footer menu background",
+    source: "color_footer_menu_bg",
+    defaultColor: "#FFFFFF"
+  },
+  {
+    tab: "general",
+    type: "color",
+    label: "Color footer menu text",
+    source: "color_footer_menu_text",
+    defaultColor: "#000000"
+  },
+
+  {
+    tab: "general",
     label: "Logo",
     source: "logo_img",
     type: "image",
@@ -649,7 +709,6 @@ module.exports = [
     type: "markdown",
     label: "Extra links in footer"
   },
-
 
   {
     tab: "general",
