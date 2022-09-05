@@ -488,6 +488,24 @@ module.exports = [
 
   {
     tab: "general",
+    source: "mobile_menu_text",
+    label: "Mobile menu text",
+    type: "markdown"
+  },
+  {
+    tab: "general",
+    source: "mobile_menu_photo",
+    label: "Mobile menu photo",
+    type: "image",
+    accept: {
+      "image/jpg": true,
+      "image/webp": true,
+      "image/png": true
+    },
+  },
+
+  {
+    tab: "general",
     source: "usps_checkout_button",
     label: "USPs under confirmation button",
     type: "array",
@@ -571,6 +589,12 @@ module.exports = [
     tab: "settings",
     source: "constants:phone",
     label: "Phone number",
+    type: "text"
+  },
+  {
+    tab: "settings",
+    source: "constants:whatsapp",
+    label: "Whatsapp number",
     type: "text"
   },
   {
