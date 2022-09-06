@@ -498,7 +498,7 @@ module.exports = [
     label: "Mobile menu photo",
     type: "image",
     accept: {
-      "image/jpg": true,
+      "image/jpeg": true,
       "image/webp": true,
       "image/png": true
     },
