@@ -578,6 +578,59 @@ module.exports = [
       { id: "paypal", name: "Paypal" }
     ]
   },
+
+
+  {
+    tab: "general",
+    source: "coupons",
+    label: "Coupon codes",
+    type: "array",
+    sub: [
+      {
+        source: "code",
+        label: "Coupon code",
+        type: "text",
+
+        required:true
+      },
+      {
+        source: "validFrom",
+        label: "Valid from",
+        type: "datetime",
+
+        required:true
+      },
+      {
+        source: "validTo",
+        label: "Valid until",
+        type: "datetime",
+        required:true
+      },
+      {
+        source: "value",
+        label: "Price change",
+        type: "number",
+        required:true
+      },
+      {
+        source: "type",
+        label: "Type",
+        type: "select",
+        choices: [
+          "percentage",
+          "amount"
+        ],
+        required:true
+      },
+
+
+    ]
+  },
+
+
+
+
+
   {
     tab: "settings",
     source: "constants:siteName",
@@ -659,53 +712,7 @@ module.exports = [
     type: "text"
   },
 
-  {
-    tab: "settings",
-    source: "coupons",
-    label: "Coupon codes",
-    type: "array",
-    sub: [
-      {
-        source: "code",
-        label: "Coupon code",
-        type: "text",
-
-        required:true
-      },
-      {
-        source: "validFrom",
-        label: "Valid from",
-        type: "datetime",
-
-        required:true
-      },
-      {
-        source: "validTo",
-        label: "Valid until",
-        type: "datetime",
-        required:true
-      },
-      {
-        source: "value",
-        label: "Price change",
-        type: "number",
-        required:true
-      },
-      {
-        source: "type",
-        label: "Type",
-        type: "select",
-        choices: [
-          "percentage",
-          "amount"
-        ],
-        required:true
-      },
-
-
-    ]
-  },
-
+ 
 
 
 
