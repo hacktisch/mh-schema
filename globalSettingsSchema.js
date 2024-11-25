@@ -617,8 +617,14 @@ module.exports = [
         label: "Type",
         type: "select",
         choices: [
-          "percentage",
-          "amount"
+          {
+            id:"percentage",
+            name:"Percentage"
+          },
+          {
+            id:"amount",
+            name:"Amount"
+          }
         ],
         required:true
       },
